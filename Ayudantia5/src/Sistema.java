@@ -33,4 +33,12 @@ public interface Sistema {
      * @return True si la venta fue exitosa, False en caso contrario.
      */
     boolean realizarVenta(int codigo, int cantidadVendida);
+
+    /**
+     * Ingreso de un vendedor
+     * @param nombre del vendedor.
+     * @param contrasenia de la cuenta del vendedor.
+     * @param edad del vendedor.
+     */
+    void registrarVendedor(String nombre, String contrasenia, int edad);
 }

@@ -81,6 +81,11 @@ public class SistemaImpl implements Sistema {
         // TODO
     }
 
+    @Override
+    public void registrarVendedor(String nombre, String contrasenia, int edad) {
+
+    }
+
     /**
      * Procesa el archivo vendedores.txt y carga su información en el sistema.
      */
