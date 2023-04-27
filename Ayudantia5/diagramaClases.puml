@@ -1,0 +1,72 @@
+@startuml
+skin rose
+
+interface Sistema {
+    + iniciarSesion(nombre: String, contrasenia: String): void
+    + cerrarSesion(): void
+    + existeVendedorIngresado(): boolean
+    + obtenerVendedores(): String[]
+    + realizarVenta(codigo: int, cantidadVendida: int): boolean
+}
+
+class SistemaImpl {
+    - vendedorIngresado: Vendedor
+    - vendedores: ListaVendedor
+    - productos: ListaProducto
+    + SistemaImpl()
+    - procesarArchivoVendedores(): void
+    - procesarArchivoProductos(): void
+}
+
+class ListaVendedor {
+    - vendedores: Vendedor[]
+    - cantidadActual: int
+    - cantidadMaxima: int
+    + ListaVendedor(cantidadMaxima: int)
+    + existe(nombre: String): boolean
+    + agregar(vendedor: Vendedor): void
+    + buscar(nombre: String): Vendedor
+    + obtener(posicion: int): Vendedor
+    + getCantidadActual(): int
+}
+
+class Vendedor {
+    - nombre: String
+    - contrasenia: String
+    - edad: int
+    + Vendedor(nombre: String, contrasenia: String, edad: int)
+    + toString(): String
+    + getNombre(): String
+    + getContrasenia(): String
+}
+
+class ListaProducto {
+    - productos: Producto[]
+    - cantidadActual: int
+    - cantidadMaxima: int
+    + ListaProducto(cantidadMaxima: int)
+    + existe(codigo: int): boolean
+    + agregar(producto: Producto): void
+    + buscar(codigo: int): Producto
+}
+
+class Producto {
+    - codigo: int
+    - nombre: String
+    - cantidadUnidades: int
+    + Producto(codigo: int, nombre: String, cantidadUnidades: int)
+    + getCodigo(): int
+    + getCantidadUnidades(): int
+    + setCantidadUnidades(cantidadUnidades: int): void
+}
+
+Sistema <|. SistemaImpl: implements
+
+SistemaImpl "1" --> "1" ListaProducto: tiene
+SistemaImpl "1" --> "1" ListaVendedor: tiene
+SistemaImpl "1" --> "0..1" Vendedor: posee
+
+ListaVendedor o--> Vendedor
+ListaProducto o--> Producto
+
+@enduml
