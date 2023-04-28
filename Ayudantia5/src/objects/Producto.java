@@ -1,3 +1,5 @@
+package objects;
+
 /**
  * Clase producto.
  */

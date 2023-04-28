@@ -1,7 +1,9 @@
+package contenedores;
+
 import ucn.StdOut;
 
 /**
- * Clase contenedor de la clase Vendedor.
+ * Clase contenedor de la clase objects.Vendedor.
  */
 public class ListaVendedor {
     /**
@@ -38,7 +40,7 @@ public class ListaVendedor {
 
     /**
      * Agrega un vendedor al contenedor.
-     * @param vendedor Vendedor a agregar.
+     * @param vendedor objects.Vendedor a agregar.
      */
     public void agregar(Vendedor vendedor) {
         //revisa si la lista ya esta llena.
@@ -64,7 +66,7 @@ public class ListaVendedor {
     /**
      * Busca un vendedor en el contenedor a través de su nombre.
      * @param nombre Nombre del vendedor.
-     * @return Vendedor si es que existe, null en caso contrario.
+     * @return objects.Vendedor si es que existe, null en caso contrario.
      */
     public Vendedor buscar(String nombre) {
         for(int i=0;i<this.cantidadActual;i++){
@@ -81,7 +83,7 @@ public class ListaVendedor {
     /**
      * Obtiene un vendedor a través de su posición en el contenedor.
      * @param posicion Posición a evaluar.
-     * @return Vendedor si la posición es válida, en caso contrario retorna null.
+     * @return objects.Vendedor si la posición es válida, en caso contrario retorna null.
      */
     public Vendedor obtener(int posicion) {return this.vendedores[posicion];}
 

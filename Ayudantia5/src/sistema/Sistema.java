@@ -1,3 +1,5 @@
+package sistema;
+
 /**
  * Interface del sistema.
  */

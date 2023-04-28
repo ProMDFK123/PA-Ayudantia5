@@ -1,5 +1,7 @@
+package contenedores;
+
 /**
- * Clase contenedor de la clase Producto.
+ * Clase contenedor de la clase objects.Producto.
  */
 public class ListaProducto {
     /**
@@ -37,7 +39,7 @@ public class ListaProducto {
 
     /**
      * Agrega un producto al contenedor.
-     * @param producto Producto a agregar.
+     * @param producto objects.Producto a agregar.
      */
     public void agregar(Producto producto) {
         // TODO
@@ -46,7 +48,7 @@ public class ListaProducto {
     /**
      * Busca un producto en el contenedor a través de su código.
      * @param codigo Código único del producto.
-     * @return Producto si es que existe, null en caso contrario.
+     * @return objects.Producto si es que existe, null en caso contrario.
      */
     public Producto buscar(int codigo) {
         // TODO

@@ -1,3 +1,5 @@
+import sistema.Sistema;
+import sistema.SistemaImpl;
 import ucn.StdIn;
 import ucn.StdOut;
 
@@ -15,7 +17,7 @@ public class Main {
 
     /**
      * Despliega el menú inicial del sistema.
-     * @param sistema Sistema a gestionar.
+     * @param sistema sistema.Sistema a gestionar.
      */
     public static void menuInicial(Sistema sistema) {
         while (true) {
@@ -53,7 +55,7 @@ public class Main {
 
     /**
      * Despliega el menú para iniciar sesión en el sistema.
-     * @param sistema Sistema a gestionar.
+     * @param sistema sistema.Sistema a gestionar.
      */
     public static void menuIniciarSesion(Sistema sistema) {
         print("""
@@ -79,7 +81,7 @@ public class Main {
 
     /**
      * Despliega el menú principal del sistema.
-     * @param sistema Sistema a gestionar.
+     * @param sistema sistema.Sistema a gestionar.
      */
     public static void menuPrincipal(Sistema sistema) {
         while (true) {
@@ -116,7 +118,7 @@ public class Main {
 
     /**
      * Despliega el menú para realizar una venta en el sistema.
-     * @param sistema Sistema a gestionar.
+     * @param sistema sistema.Sistema a gestionar.
      */
     public static void menuRealizarVenta(Sistema sistema) {
         print("""
@@ -145,7 +147,7 @@ public class Main {
 
     /**
      * Despliega el menú para ver los vendedores del sistema.
-     * @param sistema Sistema a gestionar.
+     * @param sistema sistema.Sistema a gestionar.
      */
     public static void menuVerVendedores(Sistema sistema) {
         print("""
@@ -154,14 +156,14 @@ public class Main {
         String[] listado = sistema.obtenerVendedores();
 
         for (int i = 0; i < listado.length; i++) {
-            print("Vendedor N°" + (i + 1));
+            print("objects.Vendedor N°" + (i + 1));
             print(listado[i]);
         }
     }
 
     /**
      * Despliega el menú para cerrar sesión en el sistema.
-     * @param sistema Sistema a gestionar.
+     * @param sistema sistema.Sistema a gestionar.
      */
     public static void menuCerrarSesion(Sistema sistema) {
         print("""

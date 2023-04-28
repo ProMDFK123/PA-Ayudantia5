@@ -1,12 +1,16 @@
+package sistema;
+
+import contenedores.ListaProducto;
+import contenedores.ListaVendedor;
 import ucn.ArchivoEntrada;
 import ucn.Registro;
 
 /**
- * Clase SistemaImpl.
+ * Clase sistema.SistemaImpl.
  */
 public class SistemaImpl implements Sistema {
     /**
-     * Vendedor que ha iniciado sesión en el sistema.
+     * objects.Vendedor que ha iniciado sesión en el sistema.
      */
     private Vendedor vendedorIngresado;
 
